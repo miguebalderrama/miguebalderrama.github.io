@@ -1,0 +1,695 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border-top: solid #572ee5 5px;
+  width: auto;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 2rem 1.2rem;
+  max-width: 1200px;
+}
+body header img {
+  width: 3rem;
+}
+body main .pasos {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+body main .pasos .instrucciones {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+body main .pasos .instrucciones .numeros {
+  margin: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .pasos .instrucciones .numeros .num {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+  margin-left: 1em;
+  color: #572ee5;
+  border: solid #572ee5 1.5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+body main .pasos .instrucciones .numeros .num p {
+  margin-top: 0.4em;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+body main .pasos .instrucciones .reloj {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  color: #572ee5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+}
+body main .pasos .instrucciones .repetir {
+  width: auto;
+  white-space: nowrap;
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  color: #572ee5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline solid 2px #5ed7c6;
+}
+body main .pasos .line {
+  border-bottom: solid #572ee5 7px;
+  width: 100%;
+  margin: auto;
+}
+body main .comenzar {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+body main .comenzar #start {
+  color: #572ee5;
+  border: solid 1.5px #572ee5;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  width: 127px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: bold;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+body main .comenzar #start:hover {
+  color: white;
+  background-color: #572ee5;
+}
+body footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 196px;
+  padding-top: 45px;
+  padding-bottom: 25px;
+  border-bottom: solid 5px #572ee5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+body footer .redes {
+  padding-left: 0;
+}
+body footer .redes .iconitos {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+body footer .redes .iconitos .contain_icon_face {
+  width: 20px;
+  margin-left: 8px;
+  height: 20px;
+  background: url("..//assets/icon_facebook.svg") no-repeat;
+}
+body footer .redes .iconitos .contain_icon_face:hover {
+  background: url("..//assets/icon_facebook_hover.svg") no-repeat;
+}
+body footer .redes .iconitos .contain_icon_instagram {
+  width: 20px;
+  margin-left: 6px;
+  height: 20px;
+  background: url("..//assets/icon_instagram.svg") no-repeat;
+}
+body footer .redes .iconitos .contain_icon_instagram:hover {
+  background: url("..//assets/icon_instagram-hover.svg") no-repeat;
+}
+body footer .redes .iconitos .contain_icon_twitter {
+  width: 20px;
+  margin-left: 10px;
+  height: 20px;
+  background: url("..//assets/icon-twitter.svg") no-repeat;
+}
+body footer .redes .iconitos .contain_icon_twitter:hover {
+  background: url("..//assets/icon-twitter-hover.svg") no-repeat;
+}
+
+.input:focus {
+  border: none;
+}
+
+.input:active {
+  border: none;
+}
+
+.videoasset {
+  box-sizing: border-box;
+  width: 100%;
+}
+.videoasset .camfull {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -90px;
+}
+.videoasset .camfull #element-camara {
+  width: 20%;
+  margin-top: -0.4em;
+}
+.videoasset .camfull .camrollo {
+  margin-top: 2em;
+}
+.videoasset .camfull .camrollo .element-cinta1 {
+  width: 40px;
+  margin-right: -0.5em;
+}
+.videoasset .camfull .camrollo .element-cinta1-active {
+  width: 40px;
+  margin-right: -0.5em;
+  animation: 3s rotate linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.videoasset .camfull .camrollo .element-cinta2 {
+  width: 45px;
+}
+.videoasset .camfull .camrollo .element-cinta2-active {
+  width: 45px;
+  animation: 3s rotate linear infinite;
+  transform-origin: 50% 50%;
+  animation-direction: reverse;
+}
+.videoasset #container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 350px;
+  height: 260px;
+  border: 1.5px #572ee5 solid;
+  margin: 0;
+}
+.videoasset #container .message {
+  width: 80%;
+  font-size: 20px;
+  color: #572ee5;
+  text-align: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.videoasset #container .message .word {
+  color: #50e3c2;
+}
+.videoasset #container .message p {
+  color: black;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  line-height: 23px;
+  margin-top: 12px;
+}
+.videoasset #container #video {
+  width: 340px;
+  background-color: white;
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.videoasset #container .preview {
+  box-sizing: border-box;
+  position: relative;
+}
+.videoasset #container .preview #gif {
+  width: 350px;
+  height: auto;
+}
+.videoasset #container .preview .overlay {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  background: rgba(87, 46, 229, 0.6);
+  /* Black see-through */
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: column;
+}
+.videoasset #container .preview .overlay .estado {
+  display: none;
+  color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.videoasset #container .preview .overlay .icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+.videoasset #container .preview .overlay .icon #copy {
+  opacity: 0.7;
+}
+.videoasset #container .preview .overlay .icon #download {
+  opacity: 0.7;
+}
+.videoasset #container .preview .overlay .icon #copy:hover {
+  opacity: 1;
+}
+.videoasset #container .preview .overlay .icon #download:hover {
+  opacity: 1;
+}
+.videoasset .element-luz-camara {
+  width: 50px;
+  margin-left: 220px;
+  margin-bottom: 20px;
+}
+.videoasset .element-luz-camara-active {
+  width: 50px;
+  animation-name: parpadeo;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#pelicula {
+  display: none;
+}
+
+.hamburger {
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  padding: 10px 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 1002;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamburger.is-active {
+  background-color: none;
+}
+
+._layer {
+  background: #572ee5;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  width: 15px;
+  height: 3px;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger.is-active .-top {
+  transform: translateY(230%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+  opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+  transform: translateY(-230%) rotate(135deg) !important;
+}
+
+.menuppal.is_active {
+  transform: translate3d(0px, 95px, 0px);
+}
+
+.menuppal {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(87, 46, 229, 0.9);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0px, -100%, 0px);
+  transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+  width: 100%;
+  z-index: 1001;
+  color: white;
+}
+
+.menuppal ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menuppal ul li {
+  list-style: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  line-height: 3em;
+  height: 3em;
+  text-transform: none;
+  font-weight: bold;
+}
+.menuppal ul li .linea {
+  width: 41px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+
+.menuppal ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menuppal ul li a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.input:focus {
+  border: none;
+}
+
+.input:active {
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .busqueda {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .imagenes {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+  }
+  .imagenes img {
+    padding: 20px;
+  }
+
+  body main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  body main .videoasset {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body main .videoasset .camfull {
+    display: block;
+    margin-bottom: 0;
+    align-items: unset;
+  }
+  body main .videoasset .camfull #element-camara {
+    width: 110px;
+    margin-top: -0.4em;
+  }
+  body main .videoasset .camfull .camrollo {
+    margin-top: 7em;
+  }
+  body main .videoasset .camfull .camrollo .element-cinta1 {
+    width: 45px;
+    margin-right: -0.5em;
+  }
+  body main .videoasset .camfull .camrollo .element-cinta1-active {
+    width: 45px;
+    margin-right: -0.5em;
+    animation: 3s rotate linear infinite;
+    transform-origin: 50% 50%;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  body main .videoasset .camfull .camrollo .element-cinta2 {
+    width: 63px;
+  }
+  body main .videoasset .camfull .camrollo .element-cinta2-active {
+    width: 63px;
+    animation: 3s rotate linear infinite;
+    transform-origin: 50% 50%;
+    animation-direction: reverse;
+  }
+  body main .videoasset .element-luz-camara {
+    width: 80px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  body main .videoasset .element-luz-camara-active {
+    width: 80px;
+    animation-name: parpadeo;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  body main .videoasset #pelicula {
+    display: block;
+    align-self: flex-end;
+    margin-left: 4em;
+    margin-bottom: -6em;
+  }
+  body main .videoasset #container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 688px;
+    height: 390px;
+    border: 1.5px #572ee5 solid;
+  }
+  body main .videoasset #container #video {
+    width: 480px;
+    height: 320px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  body main .videoasset #container .preview {
+    position: relative;
+  }
+  body main .videoasset #container .preview #gif {
+    width: 480px;
+    height: auto;
+  }
+  body main .videoasset #container .preview .overlay {
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    background: rgba(87, 46, 229, 0.6);
+    /* Black see-through */
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-direction: column;
+  }
+  body main .videoasset #container .preview .overlay .estado {
+    color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+  body main .videoasset #container .preview .overlay .icon {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+  body main .videoasset #container .preview .overlay .icon #copy {
+    opacity: 0.7;
+  }
+  body main .videoasset #container .preview .overlay .icon #download {
+    opacity: 0.7;
+  }
+  body main .videoasset #container .preview .overlay .icon #copy:hover {
+    opacity: 1;
+  }
+  body main .videoasset #container .preview .overlay .icon #download:hover {
+    opacity: 1;
+  }
+  body main .videoasset #container .message {
+    width: 50%;
+    font-size: 25px;
+    color: #572ee5;
+    text-align: center;
+    line-height: 35px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+  body main .videoasset #container .message .word {
+    color: #50e3c2;
+  }
+  body main .videoasset #container .message p {
+    color: black;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  body main .pasos {
+    width: 50%;
+    margin: auto;
+    position: relative;
+  }
+  body main .pasos .instrucciones {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  body main .pasos .instrucciones .numeros {
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body main .pasos .instrucciones .numeros .num {
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+    margin-left: 1em;
+    color: #572ee5;
+    border: solid #572ee5 1.5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  body main .pasos .instrucciones .numeros .num p {
+    margin-top: 0.4em;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  body main .pasos .instrucciones .reloj {
+    position: absolute;
+    top: 19px;
+    right: 80px;
+    color: #572ee5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  body main .pasos .instrucciones .repetir {
+    width: auto;
+    white-space: nowrap;
+    position: absolute;
+    top: 19px;
+    right: 60px;
+    color: #572ee5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline solid 2px #5ed7c6;
+  }
+  body main .pasos .line {
+    border-bottom: solid #572ee5 7px;
+    width: 80%;
+    margin: auto;
+  }
+  body footer {
+    height: 300px;
+    flex-direction: row;
+  }
+  body footer .redes {
+    padding-left: 150px;
+    display: flex;
+    flex-direction: row;
+  }
+  body footer .redes .iconitos {
+    padding-top: 0;
+  }
+  body footer .redes .iconitos .contain_icon_face {
+    width: 20px;
+    margin-left: 15px;
+    height: 20px;
+    background: url("..//assets/icon_facebook.svg") no-repeat;
+  }
+  body footer .redes .iconitos .contain_icon_face:hover {
+    background: url("..//assets/icon_facebook_hover.svg") no-repeat;
+  }
+  body footer .redes .iconitos .contain_icon_instagram {
+    width: 20px;
+    margin-left: 8px;
+    height: 20px;
+    background: url("..//assets/icon_instagram.svg") no-repeat;
+  }
+  body footer .redes .iconitos .contain_icon_instagram:hover {
+    background: url("..//assets/icon_instagram-hover.svg") no-repeat;
+  }
+  body footer .redes .iconitos .contain_icon_twitter {
+    width: 20px;
+    margin-left: 15px;
+    height: 20px;
+    background: url("..//assets/icon-twitter.svg") no-repeat;
+  }
+  body footer .redes .iconitos .contain_icon_twitter:hover {
+    background: url("..//assets/icon-twitter-hover.svg") no-repeat;
+  }
+  body footer .pie_footer {
+    padding-right: 150px;
+  }
+}
